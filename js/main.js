@@ -135,3 +135,5 @@ const createArrayOfAdverts = () => {
   }
   return arrayOfAdverts;
 };
+
+createArrayOfAdverts();
