@@ -1,9 +1,9 @@
 import { MOCKS, PARAMETERS } from './const.js';
 import { getRandomArrayElement, getRandomInteger, getRandomlyRandomArray, getRandomFloatingPoint } from './util.js';
 
-const createAdvert = (advertId) => ({
+const createAdvert = () => ({
   author: {
-    avatar: `img/avatars/user${(`0${advertId + 1}`).slice(-2)}.png`,
+    avatar: `img/avatars/user${(`0${getRandomInteger(1, 10)}`).slice(-2)}.png`,
   },
   offer: {
     title: getRandomArrayElement(MOCKS.titles),
@@ -26,7 +26,7 @@ const createAdvert = (advertId) => ({
 const createArrayOfAdverts = () => {
   const arrayOfAdverts = [];
   for (let currentAdvert = 0; currentAdvert < MOCKS.maxId; currentAdvert++) {
-    arrayOfAdverts[currentAdvert] = createAdvert(currentAdvert);
+    arrayOfAdverts[currentAdvert] = createAdvert();
     arrayOfAdverts[currentAdvert].offer.address = `${arrayOfAdverts[currentAdvert].location.lat}, ${arrayOfAdverts[currentAdvert].location.lng}`;
   }
   return arrayOfAdverts;

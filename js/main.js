@@ -1,3 +1,3 @@
-import { createArrayOfAdverts } from './data.js';
+import { showAdverts } from './show-similiar-adverts.js';
 
-createArrayOfAdverts();
+showAdverts();

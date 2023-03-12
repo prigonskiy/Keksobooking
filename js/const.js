@@ -74,3 +74,10 @@ export const PARAMETERS = {
   decimalSigns: 5,
 };
 
+export const typesNames = {
+  flat: 'Квартира',
+  bungalow: 'Бунгало',
+  house: 'Дом',
+  palace: 'Дворец',
+  hotel: 'Отель',
+};
